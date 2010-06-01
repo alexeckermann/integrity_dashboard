@@ -41,6 +41,8 @@ $(function(){
 					
 				}
 				
+				Dashboard._scheduleOverviewUpdate();
+				
 			});
 			
 		},
@@ -90,6 +92,8 @@ $(function(){
 		_failedOverviewUpdate: function(){
 			
 			$("#projects .status").html("Failed update!").addClass("failed");
+			
+			Dashboard._scheduleOverviewUpdate();
 			
 		},
 		
