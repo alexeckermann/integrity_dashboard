@@ -1,0 +1,54 @@
+body {
+	background: #222;
+	color: #EEE;
+	font: 1em/1.5em Helvetica, Arial, sans-serif;
+}
+
+#projects ul.results {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	-webkit-padding-start: none;
+}
+
+#projects ul.results li {
+	list-style: none;
+	display: block;
+	margin: 20px 0;
+	padding: 30px 30px 25px;
+	background: #555;
+	overflow: hidden;
+}
+
+#projects ul.results li.status.failed {
+	background: #9C150F;
+}
+
+#projects ul.results li.status.success {
+	background: #0B9C10;
+}
+
+#projects ul.results li.status.pending {
+	background: #ADA400;
+}
+
+#projects ul.results li h2 {
+	float: left;
+	font-size: 5em;
+	margin: 0;
+}
+
+#projects ul.results li p.status {
+	font-size: 4em;
+	margin-bottom: 0.5em;
+}
+
+#projects ul.results li p {
+	text-align: right;
+	margin: 5px 0;
+}
+
+#projects ul.results li.status.failed p.author {
+	font-size: 2em;
+	font-weight: bold;
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Integrity Failboard</title>
+		<meta charset="utf-8" />
+		
+		<link rel="stylesheet" media="screen" href="/css/style.css" />
+		
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+		<script type="text/javascript" src="/lib/application.js"></script>
+		<script type="text/javascript">
+		  $(function(){
+		    
+		    Dashboard.init("http://ci.codefire.com.au/overview.json");
+		    
+		  });
+		</script>
+	</head>
+	<body>
+		<section id="projects">
+		  <div class="title">
+		    <h1>Projects</h1>
+		    <p class="udpated_at">updating...</p>
+		  </div>
+		  <ul class="results">		    
+	    </ul>
+		</section>
+	</body>
+</html>
