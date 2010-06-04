@@ -1,7 +1,7 @@
 body {
 	background: #222;
 	color: #EEE;
-	font: 1em/1.5em Helvetica, Arial, sans-serif;
+	font: 0.9em/1.5em Helvetica, Arial, sans-serif;
 	margin: 0;
 	padding: 0;
 }
@@ -91,4 +91,66 @@ h1 {
 #projects ul.results li.status.failed p.author {
 	font-size: 2em;
 	font-weight: bold;
+}
+
+#clock {
+	position: absolute;
+	bottom: 2em;
+	width: 100%;
+	overflow: hidden;
+}
+
+#clock .calendar {
+	width: 300px;
+	height: 300px;
+	margin: 0 auto;
+	position: relative;
+	background: transparent url(/images/calendar.png) no-repeat center top;
+}
+
+#clock .calendar .month {
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	width: 300px;
+	height: 85px;
+	line-height: 85px;
+	top: 12px;
+	font-size: 3em;
+	font-weight: bold;
+	text-align: center;
+	text-shadow: 2px 2px 0px rgba(0,0,0,0.3);
+}
+
+#clock .calendar .day {
+	position: absolute;
+	top: 85px;
+	height: 26px;
+	width: 300px;
+	color: #cc3232;
+	font-size: 2em;
+	font-weight: bold;
+	text-align: center;
+	text-shadow: 2px 2px 0px rgba(255,255,255,1);
+}
+
+#clock .calendar .date_container {
+	position: absolute;
+	top: 155px;
+	width: 300px;
+	color: #333;
+	font-size: 2em;
+	font-weight: bold;
+	text-align: center;
+}
+
+#clock .calendar .date_container .date_p sup {
+	vertical-align: top;
+	text-shadow: 2px 2px 0px rgba(255,255,255,1);
+}
+
+#clock .calendar .date_container .date_p span.date {
+	font-size: 4em;
+	color: #333;
+	text-shadow: 2px 2px 0px rgba(255,255,255,1);
 }

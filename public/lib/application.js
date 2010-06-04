@@ -1,5 +1,54 @@
 $(function(){
 	
+	var Clock = window.Clock = {
+		
+		_obj: $("#clock"),
+		_interval: 0,
+		_interval_amount: 800,
+		_months: ["January", "February", "Machr", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+		_days: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+		
+		init: function(){
+			
+			this._interval = setInterval(Clock.update, this._interval_amount)
+			
+		},
+		
+		update: function() {
+			
+			var d = new Date(),
+					day = d.getDay(),
+					date = d.getDate(),
+					month = d.getMonth(),
+					year = d.getFullYear(),
+					sup = "";
+					
+			if (date == 1 || date == 21 || date ==31)
+			   {
+			   sup = "st";
+			   }
+			else if (date == 2 || date == 22)
+			   {
+			   sup = "nd";
+			   }
+			else if (date == 3 || date == 23)
+			   {
+			   sup = "rd";
+			   }
+			else
+			   {
+			   sup = "th";
+			   }
+			
+			$(".day", this._obj).html(Clock._days[day]);
+			$(".date", this._obj).html(date);
+			$(".sup", this._obj).html(sup);
+			$(".month", this._obj).html(Clock._months[month]);
+			
+		}
+		
+	}
+	
 	var Dashbaord = window.Dashboard = {
 		
 		_overviewTimer: 0,

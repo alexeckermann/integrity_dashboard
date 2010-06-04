@@ -12,6 +12,7 @@
 		  $(function(){
 		    
 		    Dashboard.init("http://ci.codefire.com.au/overview.json");
+		    Clock.init();
 		    
 		  });
 		</script>
@@ -19,11 +20,21 @@
 	<body>
 		<section id="projects">
 		  <div class="title">
-		    <h1>Projects</h1>
+		    <h1>Project Builds</h1>
 		    <!-- <p class="udpated_at">updating...</p> -->
 		  </div>
 		  <ul class="results">		    
 	    </ul>
+		</section>
+		
+		<div id="clock">
+      <div class="calendar">
+        <p class="month"></p>
+        <p class="day"></p>
+        <div class="date_container">
+          <p class="date_p"><span class="date"></span><sup class="sup"></sup></p>
+        </div>
+      </div>
 		</section>
 	</body>
 </html>
